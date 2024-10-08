@@ -56,7 +56,7 @@ export const Project = (project: ProjectType) => {
       </div>
 
       <Card className="col-span-full lg:row-start-1 lg:row-end-3 lg:col-start-3 lg:col-end-5 lg:min-h-[250px] opacity-0 mobile-animation descriptionCard">
-        <CardBody className="text-gray-400 text-lg flex justify-between gap-4">
+        <CardBody className="text-gray-700 text-lg flex justify-between gap-4">
           <div className="hidden lg:flex col-span-full lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-5 text-3xl font-bold text-white opacity-0 mobile-animation titleSection">
             <span className="bg-[#303036] p-2 rounded-md mr-2"> {icon}</span>{" "}
             {title}
@@ -90,7 +90,7 @@ export const Project = (project: ProjectType) => {
           href={websiteUrl}
           rel="noopener noreferrer"
           target="_blank"
-          className="min-h-full flex justify-center items-center"
+          className="cursor-pointer min-h-full flex justify-center items-center bg-[#303036]"
         >
           <CardBody className="justify-center items-center">
             {!websiteUrl ? (
@@ -118,7 +118,7 @@ export const Project = (project: ProjectType) => {
           target="_blank"
           className="min-h-full flex justify-center items-center"
         >
-          <CardBody className="justify-center items-center">
+          <CardBody className="cursor-pointer justify-center items-center bg-[#303036]">
             <GithubSVG />
           </CardBody>
         </Link>

@@ -2,13 +2,8 @@ import { educationType } from "../types";
 
 export const educationList: educationType[] = [
   {
-    career: "Full Stack Developmet Immersive",
-    years: "2022",
-    description: "",
-  },
-  {
-    career: "Computer Engineering",
-    years: "2018-2021",
-    description: "",
+    college: "University of Maryland, College Park",
+    years: "Aug. 2020 - May 2024",
+    description: "B.S. Computer Science, Business Minor",
   },
 ];

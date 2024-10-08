@@ -1,5 +1,5 @@
 export type educationType = {
-  career: string;
+  college: string;
   years: string;
   description: string;
 };

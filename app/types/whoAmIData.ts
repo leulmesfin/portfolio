@@ -1,6 +1,7 @@
+export type FullNameType = React.ComponentType<{}>;
+
 export type whoAmIDataType = {
-  fullName: string;
+  fullName: FullNameType;
   profession: string;
   whoAmI: string;
-  quote: string;
 };

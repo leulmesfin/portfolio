@@ -2,7 +2,7 @@ import { ProjectList } from "@/app/utils";
 import { ProjectType } from "@/app/types";
 import { Project } from "../Project";
 
-export const Projects = () => {
+const Projects = () => {
   return (
     <main className="flex flex-col gap-20">
       {ProjectList.map((project: ProjectType) => (
@@ -14,3 +14,5 @@ export const Projects = () => {
     </main>
   );
 };
+
+export default Projects;

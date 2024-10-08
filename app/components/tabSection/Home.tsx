@@ -27,7 +27,8 @@ const IconComponent = forwardRef<HTMLDivElement, { icon: any }>(
 );
 IconComponent.displayName = "IconComponent";
 export default IconComponent;
-const { fullName, profession, whoAmI, quote } = whoAmIData;
+const { fullName, profession, whoAmI} = whoAmIData;
+const FullNameComponent = whoAmIData.fullName;
 
 export const Home = () => {
   useEffect(() => {
@@ -49,12 +50,15 @@ export const Home = () => {
     <div className="grid grid-rows-8 grid-cols-4 lg:grid-cols-3 gap-5">
       <Card className="col-span-full lg:row-start-2 lg:row-span-2 lg:col-start-2 lg:col-span-1">
         <CardBody className="flex-col items-center justify-center gap-2">
-          <Avatar
+          {/* <Avatar
             name="LM"
             src="https://res.cloudinary.com/dbzv9xfjp/image/upload/v1700603685/portfolio/avatar-profile_lb9hd9.jpg"
             className="w-24 h-24 text-large brightness-90"
-          />
-          <h1 className="text-4xl font-bold">{fullName}</h1>
+          /> */}
+          {/* <h1 className="text-4xl font-bold">
+            <FullNameComponent />
+          </h1> */}
+          <FullNameComponent />
 
           {/* <Button>Download CV</Button> */}
         </CardBody>
@@ -78,7 +82,7 @@ export const Home = () => {
       <Card className="hidden lg:flex col-span-2 lg:row-start-3 lg:row-span-1 lg:col-start-3 lg:col-span-1 bg-blue opacity-0 mobile-animation quoteCard">
         <CardBody className="justify-center items-center lg:row-start-2 lg:cols-start-4">
           <div className="text-3xl font-bold text-center">
-            &#34;{quote}&#34;
+            {/* &#34;{quote}&#34; */}
           </div>
         </CardBody>
       </Card>
@@ -149,8 +153,8 @@ export const Home = () => {
           <div className="flex flex-col lg:flex-col gap-2">
             {educationList.map((education: educationType) => (
               <Education
-                key={`education-item-${education.career}`}
-                career={education.career}
+                key={`education-item-${education.college}`}
+                college={education.college}
                 years={education.years}
                 description={education.description}
               />

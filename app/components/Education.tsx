@@ -1,11 +1,13 @@
 import { educationType } from "../types";
 
-export const Education = ({ career, years, description }: educationType) => {
+export const Education = ({ college, years, description }: educationType) => {
   return (
     <div>
-      <h3 className="text-xl inline">{career}</h3>
+      <a href='https://cmns.umd.edu/' className="">
+        <h3 className="text-xl inline">{college}</h3>
+      </a>
       <span className="text-sm text-gray-400"> ({years})</span>
-      <p className="text-lg text-gray-400">{description}</p>
+      <em><p className="text-lg text-gray-400">{description}</p></em>
     </div>
   );
 };

@@ -1,19 +1,89 @@
+// "use client"
+
+// import { useState } from "react"
+// import { motion, AnimatePresence } from "framer-motion"
+// import { FullNameType } from "@/app/types/whoAmIData"
+
+// export const AmharicName: FullNameType = () => {
+//   const [isLeulHovered, setIsLeulHovered] = useState(false)
+//   const [isMesfinHovered, setIsMesfinHovered] = useState(false)
+
+//   return (
+//     <h1 className="cursor-pointer text-4xl font-bold text-center flex justify-center items-center">
+//       <span
+//         className="inline-block w-24 text-center"
+//         onMouseEnter={() => setIsLeulHovered(true)}
+//         onMouseLeave={() => setIsLeulHovered(false)}
+//       >
+//         <AnimatePresence mode="wait">
+//           <motion.span
+//             key={isLeulHovered ? "leul-amharic" : "leul-english"}
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             exit={{ opacity: 0 }}
+//             transition={{ duration: 0.3 }}
+//             className="inline-block"
+//           >
+//             {isLeulHovered ? "ሌዑል" : "Leul"}
+//           </motion.span>
+//         </AnimatePresence>
+//       </span>
+//       {/* <span className="mx-2"> </span>
+//       <span
+//         className="inline-block w-32 text-center"
+//         onMouseEnter={() => setIsMesfinHovered(true)}
+//         onMouseLeave={() => setIsMesfinHovered(false)}
+//       >
+//         <AnimatePresence mode="wait">
+//           <motion.span
+//             key={isMesfinHovered ? "mesfin-amharic" : "mesfin-english"}
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             exit={{ opacity: 0 }}
+//             transition={{ duration: 0.3 }}
+//             className="inline-block"
+//           >
+//             {isMesfinHovered ? "መስፍን" : "Mesfin"}
+//           </motion.span>
+//         </AnimatePresence>
+//       </span> */}
+//     </h1>
+//   )
+// }
 "use client"
-
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { FullNameType } from "@/app/types/whoAmIData"
 
-export const AmharicName: FullNameType = () => {
+export const AmharicName = () => {
   const [isLeulHovered, setIsLeulHovered] = useState(false)
-  const [isMesfinHovered, setIsMesfinHovered] = useState(false)
+  const [isAnimating, setIsAnimating] = useState(false)
+
+  const handleMouseEnter = useCallback(() => {
+    if (!isAnimating) {
+      setIsLeulHovered(true)
+    }
+  }, [isAnimating])
+
+  const handleMouseLeave = useCallback(() => {
+    if (!isAnimating) {
+      setIsLeulHovered(false)
+    }
+  }, [isAnimating])
+
+  const handleAnimationStart = () => {
+    setIsAnimating(true)
+  }
+
+  const handleAnimationComplete = () => {
+    setIsAnimating(false)
+  }
 
   return (
     <h1 className="cursor-pointer text-4xl font-bold text-center flex justify-center items-center">
       <span
-        className="inline-block w-24 text-center"
-        onMouseEnter={() => setIsLeulHovered(true)}
-        onMouseLeave={() => setIsLeulHovered(false)}
+        className="relative inline-block w-24 h-12 text-center"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <AnimatePresence mode="wait">
           <motion.span
@@ -21,32 +91,17 @@ export const AmharicName: FullNameType = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="inline-block"
+            transition={{ duration: 0.2 }}
+            onAnimationStart={handleAnimationStart}
+            onAnimationComplete={handleAnimationComplete}
+            className="absolute inset-0 flex items-center justify-center"
           >
             {isLeulHovered ? "ሌዑል" : "Leul"}
-          </motion.span>
-        </AnimatePresence>
-      </span>
-      <span className="mx-2"> </span>
-      <span
-        className="inline-block w-32 text-center"
-        onMouseEnter={() => setIsMesfinHovered(true)}
-        onMouseLeave={() => setIsMesfinHovered(false)}
-      >
-        <AnimatePresence mode="wait">
-          <motion.span
-            key={isMesfinHovered ? "mesfin-amharic" : "mesfin-english"}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="inline-block"
-          >
-            {isMesfinHovered ? "መስፍን" : "Mesfin"}
           </motion.span>
         </AnimatePresence>
       </span>
     </h1>
   )
 }
+
+export default AmharicName

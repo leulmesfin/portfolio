@@ -24,8 +24,8 @@ import { NextSVG } from "../components/ui/icons/index";
 export const ProjectList: ProjectType[] = [
   {
     icon: <ShadcnLandingSVG />,
-    title: "Shadcn Landing page",
-    subtitle: "Landing page template",
+    title: "Music Transfer",
+    subtitle: "Music App",
     technologies: [
       {
         name: "React",
@@ -36,7 +36,24 @@ export const ProjectList: ProjectType[] = [
           />
         ),
       },
-
+      {
+        name: "Java",
+        icon: (
+          <ReactSVG
+            color="#61DAFB"
+            size={16}
+          />
+        ),
+      },
+      {
+        name: "Spring Boot",
+        icon: (
+          <ReactSVG
+            color="#61DAFB"
+            size={16}
+          />
+        ),
+      },
       {
         name: "TypeScript",
         icon: (
@@ -47,7 +64,7 @@ export const ProjectList: ProjectType[] = [
         ),
       },
       {
-        name: "Shadcn",
+        name: "JavaScript",
         icon: (
           <ShadcnSVG
             color="#000000"
@@ -64,73 +81,33 @@ export const ProjectList: ProjectType[] = [
           />
         ),
       },
+      {
+        name: "JWT",
+        icon: (
+          <TailwindSVG
+            color="#06B6D4"
+            size={16}
+          />
+        ),
+      },
     ],
     description:
-      "Landing page  with essential sections to promote a particular product, service, event, or offer. It is fully responsive, customizable, has dark mode, meta tags and user-friendly interface.",
+      "Developed a full-stack, cross-platform music service application that seamlessly transfers playlists between Spotify and Apple Music. ",
     imgUrl: "/videos/shadcn-landing-page.webp",
     videoUrl: "/videos/shadcn-landing-page.mp4",
-    githubUrl: "https://github.com/leoMirandaa/shadcn-landing-page.git",
-    websiteUrl: "https://shadcn-landing-page.vercel.app/",
+    githubUrl: "https://github.com/leulmesfin/playlist-transfer",
+    websiteUrl: "https://www.youtube.com/watch?v=wukNB-JNbXw",
   },
   {
     icon: <MagentaKitchenSVG />,
-    title: "Magenta Kitchen",
-    subtitle: "Restaurant Menu",
+    title: "NFL Bot",
+    subtitle: "NFL Bot",
     technologies: [
       {
-        name: "React",
-        icon: (
-          <ReactSVG
-            color="#61DAFB"
-            size={16}
-          />
-        ),
-      },
-      {
-        name: "Next js",
-        icon: (
-          <NextSVG
-            color="#000"
-            size={16}
-          />
-        ),
-      },
-      {
-        name: "CSS Modules",
-        icon: (
-          <CSSSVG
-            color="#1572B6"
-            size={16}
-          />
-        ),
-      },
-      {
-        name: "Antd",
+        name: "Python",
         icon: (
           <AntdSVG
             color="#1d93ff"
-            size={16}
-          />
-        ),
-      },
-    ],
-    description:
-      "Restaurant menu created with the purpose to have an elegant digital menu, with the capability to use it with QR code and show the elemental restaurant information and all the dishes available.",
-    imgUrl: "/videos/magenta.webp",
-    videoUrl: "/videos/magenta.mp4",
-    githubUrl: "https://github.com/leomirandaa/restaurant-menu.git",
-    websiteUrl: "https://magentakitchen.vercel.app/",
-  },
-  {
-    icon: <Sk8terSVG />,
-    title: "Sk8ter",
-    subtitle: "E-commerce",
-    technologies: [
-      {
-        name: "JavaScript",
-        icon: (
-          <JavascriptSVG
-            color="#F7DF1E"
             size={16}
           />
         ),
@@ -147,6 +124,64 @@ export const ProjectList: ProjectType[] = [
       {
         name: "TypeScript",
         icon: (
+          <NextSVG
+            color="#000"
+            size={16}
+          />
+        ),
+      },
+      {
+        name: "JavaScript",
+        icon: (
+          <CSSSVG
+            color="#1572B6"
+            size={16}
+          />
+        ),
+      },
+      {
+        name: "Tailwind",
+        icon: (
+          <AntdSVG
+            color="#1d93ff"
+            size={16}
+          />
+        ),
+      }
+    ],
+    description:
+      "Developed a Discord bot that that displays the current week's NFL scores, the passing, receiving, and rushing yards leaderboards, and more! Developed with Python3 and hosted on Render.",
+    imgUrl: "/videos/magenta.webp",
+    videoUrl: "/videos/magenta.mp4",
+    githubUrl: "https://github.com/leulmesfin/NFL-Discord-Bot",
+    websiteUrl: "https://nfl-bot-ui.vercel.app/",
+  },
+  {
+    icon: <Sk8terSVG />,
+    title: "GAINZ",
+    subtitle: "Gym App",
+    technologies: [
+      {
+        name: "React Native",
+        icon: (
+          <JavascriptSVG
+            color="#F7DF1E"
+            size={16}
+          />
+        ),
+      },
+      {
+        name: "AWS DynamoDB",
+        icon: (
+          <ReactSVG
+            color="#61DAFB"
+            size={16}
+          />
+        ),
+      },
+      {
+        name: "AWS Lambda",
+        icon: (
           <TypescriptSVG
             color="#3178C6"
             size={16}
@@ -154,7 +189,7 @@ export const ProjectList: ProjectType[] = [
         ),
       },
       {
-        name: "Sass",
+        name: "Python",
         icon: (
           <SassSVG
             color="#CC6699"
@@ -164,7 +199,7 @@ export const ProjectList: ProjectType[] = [
       },
 
       {
-        name: "Prime React",
+        name: "TypeScript",
         icon: (
           <PrimeReactSVG
             color="#06B6D4"
@@ -173,7 +208,16 @@ export const ProjectList: ProjectType[] = [
         ),
       },
       {
-        name: "React Hook Form",
+        name: "JavaScript",
+        icon: (
+          <ReactHookFormSVG
+            color="#EC5990"
+            size={16}
+          />
+        ),
+      },
+      {
+        name: "Clerk Auth",
         icon: (
           <ReactHookFormSVG
             color="#EC5990"
@@ -182,12 +226,11 @@ export const ProjectList: ProjectType[] = [
         ),
       },
     ],
-    description:
-      "Dynamic e-commerce web system selling skateboards in a friendly and intuitive interface. The system has authentication, a dashboard and also dark mode.",
+    description: "Developed a full-stack mobile gym application using React Native. This app features a social media component where users can follow/unfollow users, view their friends workouts, and comment/like posts. ",
     imgUrl: "/videos/sk8ter.webp",
-    videoUrl: "/videos/sk8ter.mp4",
-    githubUrl: "https://github.com/leoMirandaa/sk8ter-shop",
-    websiteUrl: "",
+    videoUrl: "https://www.youtube.com/watch?v=iAC8FYCfB2A",
+    githubUrl: "https://github.com/kushaldevv/gainzApp",
+    websiteUrl: "https://www.youtube.com/watch?v=iAC8FYCfB2A",
   },
   {
     icon: <ShopApiSVG />,
@@ -240,20 +283,20 @@ export const ProjectList: ProjectType[] = [
         ),
       },
       {
-        name: "Swagger",
+        name: "Stripe API",
         icon: (
-          <SwaggerSVG
-            color="#85EA2D"
+          <MongooseSVG
+            color="#880000"
             size={16}
           />
         ),
-      },
+      }
     ],
     description:
-      "Backed e-commerce project that allows to manage users, categories, coupons and products with the endpoints ready to play with. Includes swagger docs.",
+      "A full-stack e-commerce website that sells hair products. This website was created using the MERN Stack, and utilizes Stripe for payment processing.",
     imgUrl: "/videos/shop-api.webp",
     videoUrl: "",
-    githubUrl: "https://github.com/leomirandaa/shop-API.git",
+    githubUrl: "https://github.com/leulmesfin/e-commerce",
     websiteUrl: "NONE",
   },
 ];
